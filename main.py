@@ -1,5 +1,5 @@
 from twitter import *
-from quotes-generator-api import quotes-generator
+from quotesgeneratorapi import quotes
 import data
 
 class Twitterbot():
