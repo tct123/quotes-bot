@@ -1,9 +1,12 @@
 from twitter import *
 from quotesgeneratorapi import quotes
-import data
+from data import *
 
 class Twitterbot():
     def __init__(self):
-        quotes.getQuotes()
+        t = Twitter(auth=OAuth(APIKEY,APIKEYSECRET,BEARERTOKEN,ACCESSTOKENSECRET))
+        content = quotes.getQuotes()
+        t.statuses.update(
+            status = content)
         print(content)
 Twitterbot()
