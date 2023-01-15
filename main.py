@@ -5,4 +5,5 @@ import data
 class Twitterbot():
     def __init__(self):
         quotes.getQuotes()
+        print(content)
 Twitterbot()
