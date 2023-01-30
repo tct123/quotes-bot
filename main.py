@@ -1,4 +1,5 @@
 from twitter import *
+from mastodon import *
 from quotesgeneratorapi import quotes
 from data import *
 
