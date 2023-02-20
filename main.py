@@ -11,12 +11,17 @@ class Socialbot():
         api_key="As3XyZ3Xl3IEUqpyUHpa6A==phjO5S4DqLxtFeqk"
         category="happiness"
         # Mastodon
-        Mastodon.create_app(
-            'InspiringQuotes',
-            api_base_url = 'https://mastodon.social',
-            to_file = 'pytooter_clientcred.secret'
-        )
-
+        #Mastodon.create_app(
+        #    'InspiringQuotes',
+        #    api_base_url = 'https://mastodon.social',
+        #    to_file = 'pytooter_clientcred.secret'
+        #)
+        mastodon = Mastodon(client_id = 'pytooter_clientcred.secret',)
+        mastodon.log_in(
+            f'{mastodon_email}',
+            f'{mastodon_password}',
+            to_file = 'pytooter_usercred.secret')
+        mastodon = Mastodon(access_token = 'pytooter_usercred.secret')
         # t = Twitter(auth=OAuth(TOKEN, TOKENSECRET, CONSUMERKEY, CONSUMERSECRET))  # Twitter
         api_url = f'https://api.api-ninjas.com/v1/quotes?category={category}'
         response = requests.get(api_url, headers={'X-Api-Key': api_key})
@@ -30,6 +35,7 @@ class Socialbot():
 
 
         print(content)
+        mastodon.toot(content)
         # t.statuses.update(status=content)
 
     def getQuotes(self, category, api_key):
