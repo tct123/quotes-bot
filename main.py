@@ -1,6 +1,6 @@
 from twitter import *
 from mastodon import *
-import quotesgenerator
+from quotesgenerator import *
 from data import *
 
 class Twitterbot():
