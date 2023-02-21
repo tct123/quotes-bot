@@ -4,6 +4,7 @@ from mastodon import *
 from data import *
 import requests  # Will be replaced
 import json  # Will be replaced
+import time
 
 
 class Socialbot():
@@ -40,4 +41,6 @@ class Socialbot():
 
     def getQuotes(self, category, api_key):
        pass
-Socialbot()
+while True:
+    time.sleep(10)
+    Socialbot()
