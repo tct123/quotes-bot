@@ -42,5 +42,5 @@ class Socialbot():
     def getQuotes(self, category, api_key):
        pass
 while True:
-    time.sleep(3600)
     Socialbot()
+    time.sleep(3600)
