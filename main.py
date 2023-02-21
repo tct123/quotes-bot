@@ -12,11 +12,11 @@ class Socialbot():
         api_key="As3XyZ3Xl3IEUqpyUHpa6A==phjO5S4DqLxtFeqk"
         category="happiness"
         # Mastodon
-        #Mastodon.create_app(
-        #    'InspiringQuotes',
-        #    api_base_url = 'https://mastodon.social',
-        #    to_file = 'pytooter_clientcred.secret'
-        #)
+        Mastodon.create_app(
+            'InspiringQuotes',
+            api_base_url = 'https://mastodon.social',
+            to_file = 'pytooter_clientcred.secret'
+        )
         mastodon = Mastodon(client_id = 'pytooter_clientcred.secret',)
         mastodon.log_in(
             f'{mastodon_email}',
