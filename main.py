@@ -7,6 +7,7 @@ import os
 import requests  # Will be replaced
 import json  # Will be replaced
 import time
+from quotesgeneratorapi_wrapper.quotesgenerator import getQuotes
 
 dv.load_dotenv()
 
@@ -34,7 +35,9 @@ class Socialbot:
         mastodon = Mastodon(access_token="pytooter_usercred.secret")
         # t = Twitter(auth=OAuth(TOKEN, TOKENSECRET, CONSUMERKEY, CONSUMERSECRET))  # Twitter
         # t.statuses.update(status=content)
-
+        content = getQuotes(category=category,api_key=api_key)
+        print(content)
+        mastodon.toot(content)
 
 while True:
     Socialbot()
