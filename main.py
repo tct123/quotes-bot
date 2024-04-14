@@ -1,4 +1,4 @@
-from twitter import *
+#from twitter import *
 from mastodon import *
 # from quotesgenerator.main import *
 from data import *
