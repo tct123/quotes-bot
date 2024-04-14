@@ -1,10 +1,11 @@
 #from twitter import *
 from mastodon import *
 # from quotesgenerator.main import *
-from data import *
+import dotenv as dv
 import requests  # Will be replaced
 import json  # Will be replaced
 import time
+dv.load_dotenv()
 
 
 class Socialbot():
