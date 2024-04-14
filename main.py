@@ -32,9 +32,10 @@ class Socialbot:
         mastodon = Mastodon(access_token="pytooter_usercred.secret")
         # t = Twitter(auth=OAuth(TOKEN, TOKENSECRET, CONSUMERKEY, CONSUMERSECRET))  # Twitter
         # t.statuses.update(status=content)
-        content = getQuotes(category=category,api_key=api_key)
+        content = getQuotes(category=category, api_key=api_key)
         print(content)
         mastodon.toot(content)
+
 
 while True:
     Socialbot()
