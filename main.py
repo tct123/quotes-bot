@@ -11,7 +11,7 @@ dv.load_dotenv()
 
 class Socialbot:
     def __init__(self):
-        api_key = "As3XyZ3Xl3IEUqpyUHpa6A==phjO5S4DqLxtFeqk"
+        api_key = os.getenv("APININJASKEY")
         category = "happiness"
         # Mastodon
         mastodon_email = os.getenv("MASTODON_EMAIL")
