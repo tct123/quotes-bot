@@ -1,8 +1,6 @@
 from mastodon import *
 import dotenv as dv
 import os
-import requests  # Will be replaced
-import json  # Will be replaced
 import time
 from quotesgeneratorapi_wrapper.quotesgenerator import getQuotes
 
