@@ -1,7 +1,4 @@
-# from twitter import *
 from mastodon import *
-
-# from quotesgenerator.main import *
 import dotenv as dv
 import os
 import requests  # Will be replaced
