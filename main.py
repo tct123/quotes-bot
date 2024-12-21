@@ -1,9 +1,6 @@
 from mastodon import Mastodon
-import dotenv as dv
 import os
 from quotesgeneratorapi_wrapper.quotesgenerator import getQuotes
-
-dv.load_dotenv()
 
 
 class Socialbot:
