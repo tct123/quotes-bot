@@ -1,7 +1,6 @@
 from mastodon import Mastodon
 import dotenv as dv
 import os
-import time
 from quotesgeneratorapi_wrapper.quotesgenerator import getQuotes
 
 dv.load_dotenv()
