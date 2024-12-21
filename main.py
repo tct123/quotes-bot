@@ -26,6 +26,5 @@ class Socialbot:
         mastodon.toot(content)
 
 
-while True:
+if __name__ == "__main__":
     Socialbot()
-    time.sleep(3600)
