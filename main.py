@@ -23,8 +23,8 @@ class Socialbot:
             client_id="pytooter_clientcred.secret",
         )
         mastodon.log_in(
-            f"{mastodon_email}",
-            f"{mastodon_password}",
+            username=f"{mastodon_email}",
+            password=f"{mastodon_password}",
             to_file="pytooter_usercred.secret",
         )
         mastodon = Mastodon(access_token="pytooter_usercred.secret")
