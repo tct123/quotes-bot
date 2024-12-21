@@ -1,4 +1,4 @@
-from mastodon import *
+from mastodon import Mastodon
 import dotenv as dv
 import os
 import time
@@ -11,26 +11,20 @@ class Socialbot:
     def __init__(self):
         api_key = os.getenv("APININJASKEY")
         category = "happiness"
+        content = getQuotes(category=category, api_key=api_key)
+        print(content)
         # Mastodon
         mastodon_email = os.getenv("MASTODON_EMAIL")
         mastodon_password = os.getenv("MASTODON_PASSWORD")
-        if not os.path.exists("pytooter_clientcred.secret"):
-            Mastodon.create_app(
-                "pytooterapp",
-                api_base_url="https://mastodon.social",
-                to_file="pytooter_clientcred.secret",
-            )
-        mastodon = Mastodon(client_id="pytooter_clientcred.secret")
-        mastodon.log_in(
-            username=mastodon_email,
-            password=mastodon_password,
-            to_file="pytooter_usercred.secret",
+        CLIENTKEY = os.getenv("CLIENTKEY")
+        CLIENTSECRET = os.getenv("CLIENTSECRET")
+        ACCESSTOKEN = os.getenv("ACCESSTOKEN")
+        mastodon = Mastodon(
+            client_id=CLIENTKEY,
+            client_secret=CLIENTSECRET,
+            access_token=ACCESSTOKEN,
+            api_base_url="https://mastodon.social",
         )
-        mastodon = Mastodon(access_token="pytooter_usercred.secret")
-        # t = Twitter(auth=OAuth(TOKEN, TOKENSECRET, CONSUMERKEY, CONSUMERSECRET))  # Twitter
-        # t.statuses.update(status=content)
-        content = getQuotes(category=category, api_key=api_key)
-        print(content)
         mastodon.toot(content)
 
 
