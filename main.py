@@ -14,8 +14,6 @@ class Socialbot:
         content = getQuotes(category=category, api_key=api_key)
         print(content)
         # Mastodon
-        mastodon_email = os.getenv("MASTODON_EMAIL")
-        mastodon_password = os.getenv("MASTODON_PASSWORD")
         CLIENTKEY = os.getenv("CLIENTKEY")
         CLIENTSECRET = os.getenv("CLIENTSECRET")
         ACCESSTOKEN = os.getenv("ACCESSTOKEN")
