@@ -8,6 +8,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  schedule:
+    - cron: '0 * * * *'
 
 permissions:
   contents: read
@@ -37,6 +39,6 @@ jobs:
     - name: Test with pytest
       run: python main.py
       env:
-        CLIENTKEY: {{secrets.CLIENTKEY}}
-        CLIENTSECRET: {{secrets.CLIENTSECRET}}
-        ACCESSTOKEN: {{secrets.ACCESSTOKEN}}
+        CLIENTKEY: ${{ secrets.CLIENTKEY }}
+        CLIENTSECRET: ${{ secrets.CLIENTSECRET }}
+        ACCESSTOKEN: ${{ secrets.ACCESSTOKEN }}
