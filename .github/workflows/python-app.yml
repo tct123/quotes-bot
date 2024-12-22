@@ -11,6 +11,11 @@ on:
   schedule:
     - cron: '0 * * * *'
 
+env: 
+  CLIENTKEY: ${{ secrets.CLIENTKEY }}
+  CLIENTSECRET: ${{ secrets.CLIENTSECRET }}
+  ACCESSTOKEN: ${{ secrets.ACCESSTOKEN }}
+
 permissions:
   contents: read
 
@@ -38,7 +43,3 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run script
       run: python main.py
-      env:
-        CLIENTKEY: ${{ secrets.CLIENTKEY }}
-        CLIENTSECRET: ${{ secrets.CLIENTSECRET }}
-        ACCESSTOKEN: ${{ secrets.ACCESSTOKEN }}
