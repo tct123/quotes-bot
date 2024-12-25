@@ -8,14 +8,14 @@ dv.load_dotenv()
 
 class Socialbot:
     def __init__(self):
-        api_key = os.getenv("APININJASKEY")
+        api_key = os.environ["APININJASKEY"]
         category = "happiness"
         content = getQuotes(category=category, api_key=api_key)
         print(content)
         # Mastodon
-        CLIENTKEY = os.getenv("CLIENTKEY")
-        CLIENTSECRET = os.getenv("CLIENTSECRET")
-        ACCESSTOKEN = os.getenv("ACCESSTOKEN")
+        CLIENTKEY = os.environ["CLIENTKEY"]
+        CLIENTSECRET = os.environ["CLIENTSECRET"]
+        ACCESSTOKEN = os.environ["ACCESSTOKEN"]
         mastodon = Mastodon(
             client_id=CLIENTKEY,
             client_secret=CLIENTSECRET,
