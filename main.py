@@ -1,7 +1,7 @@
 from mastodon import Mastodon
 import dotenv as dv
 import os
-from quotesgeneratorapi_wrapper.quotesgenerator import getQuotes
+import quotesgeneratorapi_wrapper as qg
 
 dv.load_dotenv()
 
@@ -10,7 +10,7 @@ class Socialbot:
     def __init__(self):
         api_key = os.environ["apininjaskey"]
         category = "happiness"
-        content = getQuotes(api_key=api_key)  # category=category
+        content = qg.getQuotes(api_key=api_key)  # category=category
         print(content)
         # Mastodon
         CLIENTKEY = os.environ["clientkey"]
