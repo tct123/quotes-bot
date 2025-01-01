@@ -10,7 +10,7 @@ class Socialbot:
     def __init__(self):
         api_key = os.environ["apininjaskey"]
         category = "happiness"
-        content = getQuotes(category=category, api_key=api_key)
+        content = getQuotes(api_key=api_key)  # category=category
         print(content)
         # Mastodon
         CLIENTKEY = os.environ["clientkey"]
