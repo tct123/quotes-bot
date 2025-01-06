@@ -2,3 +2,4 @@ Mastodon.py
 python_dotenv
 quotesgeneratorapi_wrapper
 pythreads
+openai
