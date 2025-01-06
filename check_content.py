@@ -13,6 +13,11 @@ def check_content(content):
     )
     prompt = f"Check if the autor of the quote '{content}' is an extremist. if it is true return only 'True'. if not return 'False'"
     chat_completition = client.chat.completions.create(
-        messages=[{"role": "user", "content": prompt}], model="gpt-4o"
+        messages=[{"role": "user", "content": prompt}],
+        model="gpt-4o",
     )
     return chat_completition
+
+
+if __name__ == "__main__":
+    check_content(content="")
