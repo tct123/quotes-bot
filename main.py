@@ -2,6 +2,7 @@ from mastodon import Mastodon
 import dotenv as dv
 import os
 import quotesgeneratorapi_wrapper as qg
+from check_content import check_content
 
 dv.load_dotenv()
 
@@ -11,7 +12,6 @@ class Socialbot:
         api_key = os.environ["apininjaskey"]
         category = "happiness"
         content = qg.getQuotes(api_key=api_key)  # category=category
-        print(content)
         # Mastodon
         CLIENTKEY = os.environ["clientkey"]
         CLIENTSECRET = os.environ["clientsecret"]
@@ -22,7 +22,11 @@ class Socialbot:
             access_token=ACCESSTOKEN,
             api_base_url="https://mastodon.social",
         )
-        mastodon.toot(content)
+        print(check_content(content=content))
+        if check_content(content=content) == "True":
+            pass
+        else:
+            mastodon.toot(content)
 
 
 if __name__ == "__main__":
