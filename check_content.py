@@ -13,4 +13,4 @@ def check_content(content):
 
 
 if __name__ == "__main__":
-    print(check_content(content="Olaf Scholz"))
+    print(check_content(content="Ursula von der Leyen"))
