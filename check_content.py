@@ -7,7 +7,7 @@ def check_content(content):
     dv.load_dotenv()
     genai.configure(api_key=os.environ["geminiapikey"])
     model = genai.GenerativeModel("gemini-1.5-flash")
-    prompt = f"Check if the autor of the quote '{content}' is an extremist. if the author is an extremist return only 'True'. if the author is not an extremist return 'False'"
+    prompt = f"Check if the autor of the quote '{content}' is an extremist. if the author is an extremist return only 'True'. if the author is not an extremist return 'False'. if you cant define it return 'None'."
     response = model.generate_content(prompt)
     return response.text
 
