@@ -16,7 +16,7 @@ env:
   clientkey: ${{ secrets.CLIENTKEY }}
   clientsecret: ${{ secrets.CLIENTSECRET }}
   accesstoken: ${{ secrets.ACCESSTOKEN }}
-  gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+  geminiapikey: ${{ secrets.GEMINIAPIKEY }}
 
 permissions:
   contents: read
