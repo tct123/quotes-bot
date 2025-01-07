@@ -1,4 +1,3 @@
-from openai import OpenAI
 import dotenv as dv
 import os
 import google.generativeai as genai
