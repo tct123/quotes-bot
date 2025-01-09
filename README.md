@@ -1,2 +1,2 @@
-# twitter-quotes-bot
+# quotes-bot
  .
