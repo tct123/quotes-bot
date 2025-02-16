@@ -23,7 +23,10 @@ class Socialbot:
             api_base_url="https://mastodon.social",
         )
         print(check_content(content=content))
-        if check_content(content=content) == "True" or check_content(content=content) == "None":
+        if (
+            check_content(content=content) == "True"
+            or check_content(content=content) == "None"
+        ):
             pass
         else:
             mastodon.toot(content)

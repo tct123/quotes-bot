@@ -3,3 +3,4 @@ python_dotenv
 quotesgeneratorapi_wrapper
 pythreads
 google_generativeai
+atproto
