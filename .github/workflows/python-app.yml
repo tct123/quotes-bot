@@ -17,6 +17,7 @@ env:
   clientsecret: ${{ secrets.CLIENTSECRET }}
   accesstoken: ${{ secrets.ACCESSTOKEN }}
   geminiapikey: ${{ secrets.GEMINIAPIKEY }}
+  bskyusername: ${{ secrets.BSKYUSERNAME }}
 
 permissions:
   contents: read

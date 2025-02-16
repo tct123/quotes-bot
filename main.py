@@ -16,6 +16,7 @@ class Socialbot:
         CLIENTKEY = os.environ["clientkey"]
         CLIENTSECRET = os.environ["clientsecret"]
         ACCESSTOKEN = os.environ["accesstoken"]
+        BSKYUSERNAME = os.environ["bskyusername"]
         mastodon = Mastodon(
             client_id=CLIENTKEY,
             client_secret=CLIENTSECRET,
