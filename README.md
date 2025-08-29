@@ -1,2 +1,1 @@
 # quotes-bot
-.
