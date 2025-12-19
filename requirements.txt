@@ -2,5 +2,5 @@ Mastodon.py
 python_dotenv
 quotesgeneratorapi_wrapper
 pythreads
-google_generativeai
+google-genai
 atproto

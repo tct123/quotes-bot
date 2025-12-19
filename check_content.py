@@ -1,6 +1,6 @@
 import dotenv as dv
 import os
-import google.generativeai as genai
+from google import genai
 
 
 def check_content(content):
