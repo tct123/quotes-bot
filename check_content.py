@@ -5,11 +5,11 @@ from google import genai
 
 def check_content(content):
     dv.load_dotenv()
-    genai.configure(api_key=os.environ["geminiapikey"])
-    model = genai.GenerativeModel("gemini-2.5-flash")
+    client = genai.Client(api_key=os.environ["geminiapikey"])
+    model = "gemini-2.5-flash"
     prompt = f"Check if the autor of the quote '{content}' is an extremist. if the author is an extremist return only 'True'. if the author is not an extremist return 'False'. if you cant define it return 'None'."
-    response = model.generate_content(prompt)
-    return response.text
+    response = client.models.generate_content(model=model, contents=prompt)
+    return response.text.strip()
 
 
 if __name__ == "__main__":
